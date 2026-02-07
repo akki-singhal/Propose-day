@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffe0ec, #fbc8d4);
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 420px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #ff4d6d;
+  font-size: 30px;
+  margin-bottom: 18px;
+}
+
+.text {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 22px;
+  border-radius: 20px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.7;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  margin-bottom: 25px;
+}
+
+.gif {
+  width: 210px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 18px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #ff5e8e, #ff85a1);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 15px;
+  box-shadow: 0 8px 20px rgba(255, 94, 142, 0.4);
+}
+
+.btn:hover {
+  transform: scale(1.06);
+}
+
+.footer {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Falling Hearts */
+.hearts::before,
+.hearts::after {
+  content: "💖 💕 💗 💘 💝";
+  position: fixed;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  font-size: 22px;
+  animation: fall 10s linear infinite;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.hearts::after {
+  animation-duration: 15s;
+  opacity: 0.5;
+}
+
+@keyframes fall {
+  from { transform: translateY(0); }
+  to { transform: translateY(120vh); }
+}
